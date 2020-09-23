@@ -9,7 +9,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-        UserServiceImpl userService = new UserServiceImpl();
+        UserService userService = new UserServiceImpl();
 
         userService.createUsersTable();
         User[] users = new User[]{
@@ -21,7 +21,7 @@ public class Main {
             userService.saveUser(user.getName(),  user.getLastName(), user.getAge());
         }
 
-        userService.getAllUsers().forEach(p -> System.out.println(p));
+        userService.getAllUsers().forEach(System.out::println);
         userService.cleanUsersTable();
         userService.dropUsersTable();
     }

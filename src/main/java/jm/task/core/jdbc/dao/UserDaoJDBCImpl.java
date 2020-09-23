@@ -10,13 +10,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class UserDaoJDBCImpl implements UserDao {
+
+    private Connection conn = Util.getConnection();
     public UserDaoJDBCImpl() {
 
     }
 
-    User user = new User();
-    Util util1 = new Util();
-    Connection conn = util1.getConnection();
+
 
 
     public void createUsersTable() {

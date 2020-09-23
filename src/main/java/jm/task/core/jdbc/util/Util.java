@@ -4,12 +4,12 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 
 public class Util {
-    private String url = "jdbc:mysql://localhost/store?serverTimezone=Europe/Moscow&useSSL=false";
-   private String username = "root";
-    private String password = "PASSFORJAZZDATAMANAge__1213455}[";
-    private String driver = "com.mysql.cj.jdbc.Driver";
+    private static String url = "jdbc:mysql://localhost/store?serverTimezone=Europe/Moscow&useSSL=false";
+   private static String username = "root";
+    private static String password = "PASSFORJAZZDATAMANAge__1213455}[";
+    private static String driver = "com.mysql.cj.jdbc.Driver";
 
-    public Connection getConnection() {
+    public static Connection getConnection() {
         Connection conn = null;
         try {
 
